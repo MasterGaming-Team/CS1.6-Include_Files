@@ -8,10 +8,10 @@
 
 #define MG_SERVER_GLOBAL            0
 #define MG_SERVER_ZOMBIEINSANITY    1
-#define MG_SERVER_CURRENT           MG_SERVER_ZOMBIEINSANITY
+#define MG_SERVER_CURRENT           MG_SERVER_GLOBAL
 
-#define MG_SERVER_VERSION           "0.0.3"
-#define MG_SERVER_GAMEMODE          "[MG]Zombie Insanity"
+#define MG_SERVER_VERSION           "0.0.0"
+#define MG_SERVER_GAMEMODE          "[MG]Mod Name"
 
 #define MG_CM_PLAYERTOCHAT          0 // A player's message to the chat
 #define MG_CM_FIX                   1 // A fix message by the server to a player or everyone(checked by id)
