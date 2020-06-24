@@ -43,7 +43,7 @@ native mg_core_menu_prefix_get(const dest[], len);
  *
  * @return true
  */
-native mg_core_menu_title_create(id, const titleLang[], titleLangLen, const dest[], destLen, bool:lVersion = false);
+native mg_core_menu_title_create(id, const titleLang[], const dest[], destLen, bool:lVersion = false);
 
 
 /*
@@ -69,7 +69,7 @@ native mg_core_chat_prefix_get();
  *
  * @return true
  */
-native mg_core_chatmessage_print(id, type, const message[], chatTeam = CS_TEAM_UNASSIGNED);
+native mg_core_chatmessage_print(id, type, chatTeam = CS_TEAM_UNASSIGNED, const message[], ...);
 
 /*
  * You can register a lang type message to be sent frequently

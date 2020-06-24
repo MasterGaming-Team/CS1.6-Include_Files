@@ -10,6 +10,7 @@
 #define MIN_PASSWORD_LENGTH	6
 #define MAX_SETINFOPW_LENGTH	32
 #define MAX_EMAIL_LENGTH	320
+#define MIN_EMAIL_LENGTH  3
 
 #define ERROR_SQL_ERROR		0 // Type of error when a connection or structure problem has occured 
 #define ERROR_ACCOUNT_NOT_FOUND	1 // Type of error when the account of the player was not found
