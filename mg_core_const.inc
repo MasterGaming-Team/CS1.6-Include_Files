@@ -19,6 +19,9 @@
 #define MG_CM_NORMAL                3 // Same as fix, but it has no automatic prefix
 #define MG_CM_NORMALFREQ            4 // Same as fixreq, but it has no automatic prefix
 
+#define OFFSET_CSMENUCODE           205
+#define KEYSMENU                    MENU_KEY_1|MENU_KEY_2|MENU_KEY_3|MENU_KEY_4|MENU_KEY_5|MENU_KEY_6|MENU_KEY_7|MENU_KEY_8|MENU_KEY_9|MENU_KEY_0
+
 /*
  * Converts an integer to a formal number in string.
  * Like:
