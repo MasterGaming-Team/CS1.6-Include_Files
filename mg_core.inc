@@ -36,7 +36,6 @@ native mg_core_menu_prefix_get(const dest[], len);
  *
  * @param id                    Player id.
  * @param titleLang             The lang access of the title's text.
- * @param titleLangLen          The max length of the titleLang parameter.
  * @param dest                  The string to copy the whole title line to.
  * @param destLen               The max length of the dest parameter.
  * @param lVersion              Set to true if you want to see the version of the server in the title.
