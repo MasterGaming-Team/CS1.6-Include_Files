@@ -85,6 +85,10 @@ stock print_chatmessage(id, input[], CsTeams:chatTeam = CS_TEAM_UNASSIGNED)
     }
 
     replace_all(input, 190, "%", "%%")
+    replace_all(input, 190, ";", "%;")
+    replace_all(input, 190, "!n", "^1")
+    replace_all(input, 190, "!t", "^3")
+    replace_all(input, 190, "!g", "^4")
 
     switch(chatTeam)
     {
@@ -95,56 +99,57 @@ stock print_chatmessage(id, input[], CsTeams:chatTeam = CS_TEAM_UNASSIGNED)
 
     if(id)
 	{
+        get_user_team(id, lPlayerTeam, charsmax(lPlayerTeam))
+
         if(chatTeam == CS_TEAM_UNASSIGNED)
 		{
-			get_user_team(id, lPlayerTeam, charsmax(lPlayerTeam))
-					
-			message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, id)
-			write_byte(id)
-			write_string(lChatTeam)
-			message_end()
+			copy(lChatTeam, charsmax(lChatTeam), lPlayerTeam)
 		}
-					
+
+        message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, id)
+        write_byte(id)
+        write_string(lChatTeam)
+        message_end()
+
         message_begin(MSG_ONE_UNRELIABLE, lMsgSayText, _, id)
         write_byte(id)
         write_string(input)
         message_end()
-					
-        if(chatTeam == CS_TEAM_UNASSIGNED)
-		{
-			message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, id)
-			write_byte(id)
-			write_string(lPlayerTeam)
-			message_end()
-        }
+
+        message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, id)
+        write_byte(id)
+        write_string(lPlayerTeam)
+        message_end()
 
         return PLUGIN_HANDLED
 	}
 	
     for(new i = 1; i <= lMaxPlayers; i++)
 	{
-		if(chatTeam == CS_TEAM_UNASSIGNED)
+        if(!is_user_connected(i))
+            continue
+
+        get_user_team(i, lPlayerTeam, charsmax(lPlayerTeam))
+
+        if(chatTeam == CS_TEAM_UNASSIGNED)
 		{
-			get_user_team(i, lPlayerTeam, charsmax(lPlayerTeam))
-					
-			message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, i)
-			write_byte(i)
-			write_string(lChatTeam)
-			message_end()
+			copy(lChatTeam, charsmax(lChatTeam), lPlayerTeam)
         }
 
-		message_begin(MSG_ONE_UNRELIABLE, lMsgSayText, _, i)
-		write_byte(i)
-		write_string(input)
-		message_end()
-					
-		if(chatTeam == CS_TEAM_UNASSIGNED)
-		{
-			message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, i)
-			write_byte(i)
-			write_string(lPlayerTeam)
-			message_end()
-		}
+        message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, i)
+        write_byte(i)
+        write_string(lChatTeam)
+        message_end()
+
+        message_begin(MSG_ONE_UNRELIABLE, lMsgSayText, _, i)
+        write_byte(i)
+        write_string(input)
+        message_end()
+
+        message_begin(MSG_ONE_UNRELIABLE, lMsgTeamInfo, _, i)
+        write_byte(i)
+        write_string(lPlayerTeam)
+        message_end()
 	}
 
     return PLUGIN_HANDLED
