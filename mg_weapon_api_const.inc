@@ -7,7 +7,7 @@
 #define MGW_INVALID					-1
 #define MGW_NONE					0
 #define MGW_P228					1
-#define MGW_GLOCK					2 // Unused by game, see MGW_CLOCK18
+#define MGW_GLOCK					2 // Unused by game, see MGW_GLOCK18
 #define MGW_SCOUT					3
 #define MGW_HEGRENADE				4
 #define MGW_XM1014					5
