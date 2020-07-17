@@ -32,6 +32,8 @@ native zi_core_class_hero_arrayslot_get(classId);
 
 native zi_core_client_last(id, team);
 
+native zi_core_client_zombiesub_available(id, classId);
+
 native zi_core_client_zombie_get(id, next = false);
 native zi_core_client_zombiesub_get(id, next = false);
 native zi_core_client_human_get(id, next = false);
@@ -44,9 +46,19 @@ native zi_core_client_infect(victim, attacker = 0);
 native zi_core_client_cure(victim, attacker = 0);
 native zi_core_client_heroisate(id, classId);
 
+forward zi_fw_client_spawn(id);
+forward zi_fw_client_last(id, team);
+
 forward zi_fw_client_infect(victim, attacker, zombieClass, subClass);
 forward zi_fw_client_cure(victim, attacker, humanClass);
 forward zi_fw_client_heroisate(id, heroClass);
+
+forward zi_fw_gamemode_chosen(gamemodeId);
+forward zi_fw_countdown_start(gamemodeId);
+forward zi_fw_gamemode_start(gamemodeId);
+forward zi_fw_gamemode_end(gamemodeId);
+
+forward zi_fw_class_zombiesub_critcheck(id, classId);
 
 stock zi_client_armor_set(id, value)
 {
