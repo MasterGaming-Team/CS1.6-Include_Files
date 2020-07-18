@@ -20,7 +20,7 @@ native zi_core_allow_respawn();
 
 native zi_core_gamemode_reg(gamemodeId, const gamemodeName[], gamemodeType, bool:gamemodeAllowLaser, bool:gamemodeAllowShield, bool:gamemodeAllowInfect, bool:gamemodeAllowRespawn);
 
-native zi_core_class_zombie_reg(classId, const className[], const classDesc[], const classModel[]);
+native zi_core_class_zombie_reg(classId, classDefSubClass, const className[], const classDesc[], const classModel[]);
 native zi_core_class_zombiesub_reg(classParent, classId, const className[], const classDesc, const classModel, classBody, classHealth, classSpeed, classGravity);
 native zi_core_class_human_reg(classId, const className[], const classDesc[], const classModel, classBody);
 native zi_core_class_hero_reg(classId, const className[], classTeam);
