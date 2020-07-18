@@ -32,7 +32,7 @@ native zi_core_class_hero_arrayslot_get(classId);
 
 native zi_core_client_last(id, team);
 
-native zi_core_client_zombiesub_available(id, classId);
+native bool:zi_core_client_zombiesub_available(id, classId);
 
 native zi_core_client_zombie_get(id, next = false);
 native zi_core_client_zombiesub_get(id, next = false);
