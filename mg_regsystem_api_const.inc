@@ -21,6 +21,7 @@
 #define SQL_SAVETYPE_REGULAR    1 // Type of normal save(called at every 30secs)
 
 #define MG_SQLID_ZICLASSES      0
+#define MG_SQLID_MISSIONS       1
 
 #define MG_SETTING_AUTOLOGIN          0
 #define MG_SETTING_AUTOLOGINAUTHID    1
