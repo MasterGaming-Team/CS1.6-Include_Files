@@ -1,4 +1,4 @@
-#if define _mg_missions_api_const_included
+#if defined _mg_missions_api_const_included
     #endinput
 #endif
 

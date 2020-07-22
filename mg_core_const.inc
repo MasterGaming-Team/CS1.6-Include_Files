@@ -8,6 +8,7 @@
 
 #define MG_SERVER_GLOBAL            0
 #define MG_SERVER_ZOMBIEINSANITY    1
+#define MG_SERVER_CAPTURETHEFLAG    2
 #define MG_SERVER_CURRENT           MG_SERVER_GLOBAL
 
 #define MG_SERVER_VERSION           "0.0.0"
