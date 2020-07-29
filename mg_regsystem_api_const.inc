@@ -23,6 +23,7 @@
 #define MG_SQLID_ZICLASSES      0
 #define MG_SQLID_MISSIONS       1
 #define MG_SQLID_LEVEL          2
+#define MG_SQLID_ITEMS          3
 
 #define MG_SETTING_AUTOLOGIN          0
 #define MG_SETTING_AUTOLOGINAUTHID    1

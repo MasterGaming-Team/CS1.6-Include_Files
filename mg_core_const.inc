@@ -27,6 +27,9 @@
 #define OFFSET_CSMENUCODE           205
 #define KEYSMENU                    MENU_KEY_1|MENU_KEY_2|MENU_KEY_3|MENU_KEY_4|MENU_KEY_5|MENU_KEY_6|MENU_KEY_7|MENU_KEY_8|MENU_KEY_9|MENU_KEY_0
 
+#define mgDefLang   "en"
+new stock mgLanguageList[2][3] = {"en", "hu"}
+
 /**
  * Converts an integer to a formal number in string.
  * Like:
