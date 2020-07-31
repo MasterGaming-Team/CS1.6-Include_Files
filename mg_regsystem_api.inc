@@ -5,7 +5,9 @@
 #define _mg_regsystem_api_included
 
 #include <mg_regsystem_api_const>
-	
+
+native mg_reg_user_accountid_get(id);
+
 /**
  * Returns the value of the setting.
  *
