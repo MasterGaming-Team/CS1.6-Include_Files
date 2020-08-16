@@ -7,11 +7,11 @@
 #include <cstrike>
 #include <zi_core_const>
 
-native zi_core_arrayid_gamemode_get(arrayId = -1, arrayName = -1, arrayType = -1, arrayLaser = -1, arrayShield = -1, arrayInfect = -1, arrayRespawn = -1);
-native zi_core_arrayid_zombie_get(arrayId = -1, arrayDefSubClass = -1, arrayName = -1, arrayDesc = -1, arrayModel = -1);
-native zi_core_arrayid_zombiesub_get(arrayParent = -1, arrayId = -1, arrayName = -1, arrayDesc = -1, arrayModel = -1, arrayBody = -1, arrayHealth = -1, arraySpeed = -1, arrayGravity = -1);
-native zi_core_arrayid_human_get(arrayId = -1, arrayName = -1, arrayDesc = -1, arrayModel = -1, arrayBody = -1);
-native zi_core_arrayid_hero_get(arrayId = -1, arrayName = -1, arrayTeam = -1);
+native zi_core_arrayid_gamemode_get(&arrayId = -1, &arrayName = -1, &arrayType = -1, &arrayLaser = -1, &arrayShield = -1, &arrayInfect = -1, &arrayRespawn = -1);
+native zi_core_arrayid_zombie_get(&arrayId = -1, &arrayDefSubClass = -1, &arrayName = -1, &arrayDesc = -1, &arrayModel = -1);
+native zi_core_arrayid_zombiesub_get(&arrayParent = -1, &arrayId = -1, &arrayName = -1, &arrayDesc = -1, &arrayModel = -1, &arrayBody = -1, &arrayHealth = -1, &arraySpeed = -1, &arrayGravity = -1);
+native zi_core_arrayid_human_get(&arrayId = -1, &arrayName = -1, &arrayDesc = -1, &arrayModel = -1,&arrayBody = -1);
+native zi_core_arrayid_hero_get(&arrayId = -1, &arrayName = -1, &arrayTeam = -1);
 
 native zi_core_allow_laser();
 native zi_core_allow_shield();
