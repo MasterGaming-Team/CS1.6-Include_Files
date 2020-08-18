@@ -38,9 +38,16 @@ native zi_core_client_zombie_get(id, next = false);
 native zi_core_client_zombiesub_get(id, next = false);
 native zi_core_client_human_get(id, next = false);
 native zi_core_client_hero_get(id);
+native zi_core_client_ammo_get(id);
+native zi_core_client_banklimit_get(id);
 
 native zi_core_client_zombie_set(id, classId = ZI_CLASS_NONE, classSubId = ZI_CLASS_NONE, current = false);
 native zi_core_client_human_set(id, classId = ZI_CLASS_NONE, current = false);
+native zi_core_client_ammo_set(id, value);
+native zi_core_client_banklimit_set(id, value);
+
+native zi_core_client_ammo_add(id, value);
+native zi_core_client_banklimit_add(id, value);
 
 native zi_core_client_infect(victim, attacker = 0);
 native zi_core_client_cure(victim, attacker = 0);
