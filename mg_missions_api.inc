@@ -21,3 +21,4 @@ native mg_missions_client_value_add(id, missionId, missionValue);
 
 forward mg_fw_client_mission_done(id, missionId, missionPrizeExp, missionPrizeMP);
 forward mg_fw_client_mission_unlocked(id, missionId, unlockerMissionId);
+forward mg_fw_client_mission_value_added(id, missionId, newValue)

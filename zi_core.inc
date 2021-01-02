@@ -5,6 +5,7 @@
 #define _zi_core_included
 
 #include <cstrike>
+#include <sqlx>
 #include <zi_core_const>
 
 native zi_core_arrayid_gamemode_get(&arrayId = -1, &arrayName = -1, &arrayType = -1, &arrayLaser = -1, &arrayShield = -1, &arrayInfect = -1, &arrayRespawn = -1);
